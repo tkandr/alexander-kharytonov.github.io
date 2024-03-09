@@ -1,4 +1,6 @@
+import moment from "moment";
 import { Box, Container, Typography } from "@mui/material";
+import Logo from "app/components/logo";
 
 export default function Footer(): React.ReactElement {
   return (
@@ -6,8 +8,11 @@ export default function Footer(): React.ReactElement {
       component="footer"
       sx={{ backgroundColor: "footer.main", marginTop: "auto" }}
     >
-      <Container sx={{ py: 2 }}>
-        <Typography>Footer</Typography>
+      <Container sx={{ pb: 2 }}>
+        <Logo />
+        <Typography variant="body2">
+          &copy; {moment().year()} LaunCHR
+        </Typography>
       </Container>
     </Box>
   );

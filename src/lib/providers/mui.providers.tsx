@@ -11,12 +11,16 @@ import {
 } from "@mui/material";
 
 const sora = Sora({
-  weight: ["300", "400", "500", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
 
-export const ThemeContext = createContext({ mode: "", toggleTheme: () => {} });
+export const ThemeContext = createContext({
+  mode: "",
+  isDarkMode: true,
+  toggleTheme: () => {},
+});
 
 export const useThemeContext = () => useContext(ThemeContext);
 
@@ -49,6 +53,10 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
           },
     typography: {
       fontFamily: sora.style.fontFamily,
+      h4: {
+        fontWeight: 800,
+        fontSize: "1.35rem",
+      },
     },
     shape: {
       borderRadius: 40,
@@ -75,6 +83,7 @@ export function ThemeProviders({
   const value = useMemo(
     () => ({
       mode,
+      isDarkMode: mode === THEME_MODE.DARK,
       toggleTheme: () => {
         updateMode((prevMode) =>
           prevMode === THEME_MODE.LIGHT ? THEME_MODE.DARK : THEME_MODE.LIGHT

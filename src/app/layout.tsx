@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { Stack } from "@mui/material";
 import { ThemeProviders } from "lib/providers/mui.providers";
-import Header from "./components/header/header";
-import Footer from "./components/footer";
+import Header from "app/components/header";
+import Footer from "app/components/footer";
 
 export const metadata: Metadata = {
   title: "LaunchJoy Quests",

@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 
-export default function Page(): React.ReactElement {
+export default function HomePage(): React.ReactElement {
   return (
     <>
       <Box component="section" sx={{ backgroundColor: "section.main" }}>

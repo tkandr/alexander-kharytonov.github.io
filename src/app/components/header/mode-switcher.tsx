@@ -11,7 +11,11 @@ export default function ModeSwitcher(): React.ReactElement {
   const { mode, toggleTheme } = useThemeContext();
 
   return (
-    <IconButton onClick={toggleTheme} color="inherit">
+    <IconButton
+      onClick={toggleTheme}
+      color="inherit"
+      sx={{ marginLeft: "auto" }}
+    >
       {mode === THEME_MODE.DARK ? <Brightness7Icon /> : <Brightness4Icon />}
     </IconButton>
   );
