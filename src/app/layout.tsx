@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "LaunchJoy Quests",
 };
 
-export default function Layout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

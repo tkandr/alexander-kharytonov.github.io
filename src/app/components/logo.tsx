@@ -23,6 +23,7 @@ export default function Logo(): React.ReactElement {
         width={42}
         height={56}
         alt="Picture of the author"
+        priority={true}
       />
       <Typography component="h2" variant="h4" sx={{ marginTop: 1 }}>
         LaunchJoy

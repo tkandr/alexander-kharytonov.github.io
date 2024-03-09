@@ -1,7 +1,7 @@
 "use client";
 
 import { Sora } from "next/font/google";
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useMemo } from "react";
 import {
   createTheme,
   CssBaseline,
@@ -9,6 +9,7 @@ import {
   ThemeOptions,
   ThemeProvider,
 } from "@mui/material";
+import useLocalStorage from "lib/hooks/useLocalStorage";
 
 const sora = Sora({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -18,7 +19,6 @@ const sora = Sora({
 
 export const ThemeContext = createContext({
   mode: "",
-  isDarkMode: true,
   toggleTheme: () => {},
 });
 
@@ -78,19 +78,21 @@ export function ThemeProviders({
 }: Readonly<{
   children: React.ReactNode;
 }>): React.ReactElement {
-  const [mode, updateMode] = useState<PaletteMode>(THEME_MODE.DARK);
+  const [mode, updateMode] = useLocalStorage<PaletteMode>(
+    "mui:theme:mode",
+    THEME_MODE.DARK
+  );
 
   const value = useMemo(
     () => ({
       mode,
-      isDarkMode: mode === THEME_MODE.DARK,
       toggleTheme: () => {
-        updateMode((prevMode) =>
-          prevMode === THEME_MODE.LIGHT ? THEME_MODE.DARK : THEME_MODE.LIGHT
+        updateMode((prevState) =>
+          prevState === THEME_MODE.LIGHT ? THEME_MODE.DARK : THEME_MODE.LIGHT
         );
       },
     }),
-    [mode]
+    [mode, updateMode]
   );
 
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);

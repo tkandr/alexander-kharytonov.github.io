@@ -30,7 +30,9 @@ export default function Header(): React.ReactElement {
   const router = useRouter();
 
   const handleChange = (event: React.SyntheticEvent, value: string) => {
-    router.push(value);
+    event.preventDefault();
+
+    router.push(value, { scroll: false });
   };
 
   return (
