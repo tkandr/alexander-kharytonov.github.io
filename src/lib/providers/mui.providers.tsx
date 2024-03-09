@@ -31,6 +31,15 @@ export const THEME_MODE: { LIGHT: PaletteMode; DARK: PaletteMode } = {
 
 function getDesignTokens(mode: PaletteMode): ThemeOptions {
   return {
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 628,
+        md: 928,
+        lg: 1328,
+        xl: 1536,
+      },
+    },
     palette:
       mode === THEME_MODE.DARK
         ? {
@@ -53,9 +62,13 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
           },
     typography: {
       fontFamily: sora.style.fontFamily,
+      h3: {
+        fontWeight: 600,
+        fontSize: "1.5rem",
+      },
       h4: {
         fontWeight: 800,
-        fontSize: "1.35rem",
+        fontSize: "1.325rem",
       },
     },
     shape: {

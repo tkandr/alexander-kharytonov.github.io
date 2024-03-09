@@ -16,13 +16,13 @@ export default function Logo(): React.ReactElement {
       href="/"
       title="LaunchJoy"
       color="inherit"
-      sx={{ my: 2, textDecoration: "none" }}
+      sx={{ my: 2, textDecoration: "none", display: "inline-flex" }}
     >
       <Image
         src={`/logo/logo.${mode}.svg`}
         width={42}
         height={56}
-        alt="Picture of the author"
+        alt="LaunchJoy"
         priority={true}
       />
       <Typography component="h2" variant="h4" sx={{ marginTop: 1 }}>

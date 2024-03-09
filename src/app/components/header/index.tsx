@@ -1,19 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
-import {
-  AppBar,
-  Container,
-  Tab,
-  Tabs,
-  Toolbar,
-  Typography,
-  styled,
-} from "@mui/material";
-import ModeSwitcher from "./mode-switcher";
+import { AppBar, Container, Tab, Tabs, Toolbar, styled } from "@mui/material";
 import Logo from "app/components/logo";
+import ModeSwitcher from "./mode-switcher";
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
   "& .MuiTabs-flexContainer": {
