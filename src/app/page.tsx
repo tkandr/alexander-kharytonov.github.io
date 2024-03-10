@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid } from "@mui/material";
 import CompleteQuestsPaper from "app/components/complete-quests-paper";
 import DailyPaper from "app/components/daily-paper";
 import ProgressPaper from "app/components/progress-paper";
@@ -12,7 +12,7 @@ export default function RootPage() {
       <Box component="section" sx={{ backgroundColor: "section.main" }}>
         <Container sx={{ py: { xs: 2, md: 6 } }}>
           <Grid container spacing={{ xs: 2, md: 4 }}>
-            <Grid item xs={12} sm={5} md={6}>
+            <Grid item xs={12} sm={5} md={6} display="flex">
               <CompleteQuestsPaper onClick={(event) => console.info(event)} />
             </Grid>
             <Grid item xs={12} sm={7} md={6}>
@@ -23,7 +23,7 @@ export default function RootPage() {
                     alignItems="stretch"
                     spacing={{ xs: 2, md: 4 }}
                   >
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6} display="flex">
                       <DailyPaper
                         title="Daily"
                         subTitle="Level up to unlock exclusive quests."
@@ -31,7 +31,7 @@ export default function RootPage() {
                         onClick={(event) => console.info(event)}
                       />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6} display="flex">
                       <DailyPaper
                         title="Joy Streak"
                         subTitle="Level up to unlock exclusive quests."

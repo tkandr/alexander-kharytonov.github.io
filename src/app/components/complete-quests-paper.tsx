@@ -36,6 +36,7 @@ export default function CompleteQuestsBox({
       glareColor={mode === "dark" ? "lightblue" : "#FFDE68"}
       glarePosition="all"
       scale={1.025}
+      style={{ width: "100%" }}
     >
       <StyledPaper
         elevation={0}
