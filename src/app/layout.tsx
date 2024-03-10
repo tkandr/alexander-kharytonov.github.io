@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  quests,
 }: Readonly<{
   children: React.ReactNode;
+  quests: React.ReactNode;
 }>): React.ReactElement {
   return (
     <html lang="en">
@@ -22,6 +24,7 @@ export default function RootLayout({
             <Stack direction="column" sx={{ minHeight: "100vh" }}>
               <Header />
               {children}
+              {quests}
               <Footer />
             </Stack>
           </ThemeProviders>

@@ -1,30 +1,23 @@
 import {
   Box,
   Button,
-  Card,
   CardActions,
   CardContent,
   CardMedia,
   Divider,
   Stack,
   Typography,
-  styled,
 } from "@mui/material";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 import BorderLinearProgress from "app/components/styled/border-linear-progress";
+import StyledQuestCard from "app/components/styled/quest-card";
 import {
   Star as StarIcon,
   MetaMask as MetaMaskIcon,
   System as SystemIcon,
 } from "lib/icons";
-import Tilt from "react-parallax-tilt";
 import { useThemeContext } from "lib/providers/mui.providers";
-
-const StyledCard = styled(Card)(({ theme }) => ({
-  backgroundColor: theme.palette.quest.main,
-  border: `1px solid ${theme.palette.divider}`,
-  borderRadius: 12,
-  boxShadow: "none",
-}));
 
 export default function Quest({
   currentState,
@@ -33,6 +26,7 @@ export default function Quest({
   points,
   stagesCount,
   title,
+  index,
 }: {
   currentState: number;
   image: string;
@@ -40,10 +34,36 @@ export default function Quest({
   points: number;
   stagesCount: number;
   title: string;
+  index: number;
 }): React.ReactElement {
   const { mode } = useThemeContext();
   return (
     <Box
+      component={motion.div}
+      initial="offscreen"
+      variants={{
+        offscreen: {
+          opacity: 0,
+          scale: 0.9,
+          y: 80,
+        },
+        onscreen: {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          transition: {
+            bounce: 0.4,
+            duration: 0.8,
+            delay: index / 10,
+            type: "spring",
+          },
+        },
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      whileInView="onscreen"
       sx={{
         minWidth: {
           lg: "calc(20% - 16px)",
@@ -64,7 +84,7 @@ export default function Quest({
         glarePosition="all"
         scale={1.025}
       >
-        <StyledCard>
+        <StyledQuestCard>
           <CardMedia sx={{ height: 250 }} image={image} title={title} />
           <CardContent sx={{ py: 1.5 }}>
             <Typography
@@ -113,7 +133,7 @@ export default function Quest({
               Start a task
             </Button>
           </CardActions>
-        </StyledCard>
+        </StyledQuestCard>
       </Tilt>
     </Box>
   );
