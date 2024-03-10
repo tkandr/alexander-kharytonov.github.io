@@ -4,6 +4,7 @@ import { Stack } from "@mui/material";
 import { ThemeProviders } from "lib/providers/mui.providers";
 import Header from "app/components/header";
 import Footer from "app/components/footer";
+import Demo from "app/components/demo";
 
 export const metadata: Metadata = {
   title: "LaunchJoy Quests",
@@ -19,11 +20,12 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProviders>
-            {/* <Stack direction="column" sx={{ minHeight: "100vh" }}> */}
-            <Header />
-            {children}
-            <Footer />
-            {/* </Stack> */}
+            <Demo />
+            <Stack direction="column" sx={{ minHeight: "100vh" }}>
+              <Header />
+              {children}
+              <Footer />
+            </Stack>
           </ThemeProviders>
         </AppRouterCacheProvider>
       </body>
