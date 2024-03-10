@@ -34,10 +34,11 @@ export default function CompleteQuestsBox({
         offscreen: {
           opacity: 0,
           scale: 0,
+          x: 500,
         },
         onscreen: {
           opacity: 1,
-          y: 0,
+          x: 0,
           scale: 1,
           transition: {
             bounce: 0.4,

@@ -5,7 +5,6 @@ async function getLaunchJoyQuests() {
     setTimeout(() => {
       resolve([
         {
-          time: new Date(),
           title: "Creature",
           points: 120,
           stagesCount: 3,
@@ -13,7 +12,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_6.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 466,
           stagesCount: 5,
@@ -21,7 +19,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_7.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 245,
           stagesCount: 4,
@@ -29,7 +26,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_8.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 890,
           stagesCount: 7,
@@ -37,7 +33,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_8.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 340,
           stagesCount: 4,
@@ -45,7 +40,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_1.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 120,
           stagesCount: 3,
@@ -53,7 +47,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_10.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 466,
           stagesCount: 5,
@@ -61,7 +54,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_11.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 245,
           stagesCount: 4,
@@ -69,7 +61,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_12.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 890,
           stagesCount: 7,
@@ -77,7 +68,6 @@ async function getLaunchJoyQuests() {
           image: "/images/quests/placeholder_4.jpg",
         },
         {
-          time: new Date(),
           title: "Creature",
           points: 340,
           stagesCount: 4,

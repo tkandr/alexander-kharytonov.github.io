@@ -5,7 +5,6 @@ async function getLatestQuests() {
     setTimeout(() => {
       resolve([
         {
-          time: new Date(),
           title: "Project name",
           points: 120,
           stagesCount: 3,
@@ -13,7 +12,6 @@ async function getLatestQuests() {
           image: "/images/quests/placeholder_10.jpg",
         },
         {
-          time: new Date(),
           title: "Project name",
           points: 466,
           stagesCount: 5,
@@ -21,7 +19,6 @@ async function getLatestQuests() {
           image: "/images/quests/placeholder_11.jpg",
         },
         {
-          time: new Date(),
           title: "Project name",
           points: 245,
           stagesCount: 4,
@@ -29,7 +26,6 @@ async function getLatestQuests() {
           image: "/images/quests/placeholder_12.jpg",
         },
         {
-          time: new Date(),
           title: "Project name",
           points: 890,
           stagesCount: 7,
@@ -37,7 +33,6 @@ async function getLatestQuests() {
           image: "/images/quests/placeholder_4.jpg",
         },
         {
-          time: new Date(),
           title: "Project name",
           points: 340,
           stagesCount: 4,
