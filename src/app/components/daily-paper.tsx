@@ -65,6 +65,7 @@ export default function DailyPaper({
         <Button
           onClick={(event) => onClick(event)}
           variant="contained"
+          size="large"
           fullWidth
         >
           GM

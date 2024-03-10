@@ -25,31 +25,32 @@ const StyledCard = styled(Card)(({ theme }) => ({
 }));
 
 export default function Quest({
-  title,
-  stagesCount,
   currentState,
+  image,
   onClick,
+  points,
+  stagesCount,
+  title,
 }: {
-  title: string;
-  stagesCount: number;
   currentState: number;
+  image: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  points: number;
+  stagesCount: number;
+  title: string;
 }): React.ReactElement {
   return (
     <StyledCard
       sx={{
         minWidth: {
-          md: "calc(20% - 16px)",
-          sm: "calc(50% - 16px)",
-          xs: "calc(100% - 16px)",
+          lg: "calc(20% - 16px)",
+          md: "calc(25% - 16px)",
+          sm: "calc(50% - 10px)",
+          xs: "calc(100%)",
         },
       }}
     >
-      <CardMedia
-        sx={{ height: 250 }}
-        image="/images/quests/placeholder_1.png"
-        title={title}
-      />
+      <CardMedia sx={{ height: 250 }} image={image} title={title} />
       <CardContent sx={{ py: 1.5 }}>
         <Typography
           gutterBottom
@@ -67,7 +68,7 @@ export default function Quest({
         >
           <Stack direction="row" alignItems="center" spacing={1}>
             <StarIcon viewBox="0 0 20 20" sx={{ fontSize: 18 }} />
-            <Typography variant="body2">300 POINTs</Typography>
+            <Typography variant="body2">{points} POINTs</Typography>
           </Stack>
           <MetaMaskIcon viewBox="0 0 20 20" sx={{ fontSize: 18 }} />
         </Stack>
@@ -83,9 +84,10 @@ export default function Quest({
           </Typography>
         </Box>
       </CardContent>
-      <CardActions sx={{ pt: 0, pb: 2 }}>
+      <CardActions sx={{ pt: 0, pb: 2, px: 2 }}>
         <Button
           onClick={(event) => onClick(event)}
+          size="large"
           startIcon={
             <SystemIcon viewBox="0 0 20 20" sx={{ color: "transparent" }} />
           }

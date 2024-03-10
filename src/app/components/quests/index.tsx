@@ -1,39 +1,31 @@
 import _ from "lodash";
-import { Container, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import Quest from "./quest";
 
 export default function Quests({
+  quests,
   title,
 }: {
   title: string;
+  quests: Array<{
+    currentState: number;
+    image: string;
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
+    points: number;
+    stagesCount: number;
+    title: string;
+  }>;
 }): React.ReactElement {
   return (
-    <Container sx={{ py: 2 }}>
-      <Stack spacing={2.5} sx={{ py: 5 }}>
-        <Typography component="h5" variant="h3">
-          {title}
-        </Typography>
-        <Stack spacing={2.5} direction="row" useFlexGap flexWrap="wrap">
-          {_.map(
-            [
-              {
-                title: "Project name",
-                points: 100,
-                totalPoints: 100,
-                stagesCount: 5,
-                currentState: 3,
-              },
-            ],
-            (quest, index) => (
-              <Quest
-                {...quest}
-                onClick={(event) => console.info(event)}
-                key={index}
-              />
-            )
-          )}
-        </Stack>
+    <Stack spacing={2.5} sx={{ py: 4 }}>
+      <Typography component="h5" variant="h3">
+        {title}
+      </Typography>
+      <Stack spacing={2.5} direction="row" useFlexGap flexWrap="wrap">
+        {_.map(quests, (quest, index) => (
+          <Quest {...quest} key={index} />
+        ))}
       </Stack>
-    </Container>
+    </Stack>
   );
 }

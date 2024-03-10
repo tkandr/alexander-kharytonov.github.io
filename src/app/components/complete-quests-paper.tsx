@@ -3,19 +3,6 @@ import Image from "next/image";
 import { Box, Button, Paper, Stack, Typography, styled } from "@mui/material";
 import { East as EastIcon } from "@mui/icons-material";
 
-const IMAGES = {
-  box: {
-    src: "/images/box.png",
-    width: 48,
-    height: 50,
-  },
-  partners: {
-    src: "/images/partners.png",
-    width: 60,
-    height: 50,
-  },
-};
-
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
   display: "flex",
@@ -76,6 +63,7 @@ export default function CompleteQuestsBox({
           <Button
             onClick={(event) => onClick(event)}
             variant="contained"
+            color="secondary"
             sx={{ minWidth: "50%", width: { xs: "100%", md: "auto" } }}
             endIcon={<EastIcon />}
           >
