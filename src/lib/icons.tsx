@@ -81,3 +81,60 @@ export const Instagram = (props: CustomIcon) => (
     </defs>
   </SvgIcon>
 );
+
+export const StarPoint = (props: CustomIcon) => (
+  <SvgIcon {...props}>
+    <path
+      d="M1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11Z"
+      fill="#FFE9CE"
+    />
+    <path
+      d="M1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11Z"
+      stroke="#FFA15E"
+      stroke-width="1.25"
+    />
+    <g filter="url(#filter0_d_569_17714)">
+      <path
+        d="M16.8747 10.6238C13.8416 10.6238 11.3753 8.15741 11.3753 5.12525C11.3753 4.91721 11.208 4.75 11 4.75C10.792 4.75 10.6248 4.91721 10.6248 5.12525C10.6247 8.15741 8.15741 10.6238 5.12526 10.6238C4.91721 10.6238 4.75 10.791 4.75 10.999C4.75 11.2071 4.91721 11.3743 5.12526 11.3743C8.15839 11.3743 10.6247 13.6239 10.6247 16.8747C10.6247 17.0828 10.792 17.25 11 17.25C11.208 17.25 11.3753 17.0828 11.3753 16.8747C11.3753 13.5432 13.8426 11.3743 16.8747 11.3743C17.0828 11.3743 17.25 11.2071 17.25 10.999C17.25 10.791 17.0828 10.6238 16.8747 10.6238Z"
+        fill="#FFA15E"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_569_17714"
+        x="3.5"
+        y="3.5"
+        width="15"
+        height="15"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation="0.625" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.129412 0 0 0 0 0.14902 0 0 0 0 0.184314 0 0 0 0.15 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_569_17714"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_569_17714"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </SvgIcon>
+);

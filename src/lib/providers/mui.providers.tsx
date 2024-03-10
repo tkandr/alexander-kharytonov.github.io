@@ -79,6 +79,11 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
         styleOverrides: {
           root: () => ({
             textTransform: "none",
+            boxShadow: "none",
+
+            "&:hover": {
+              boxShadow: "none",
+            },
           }),
         },
       },
