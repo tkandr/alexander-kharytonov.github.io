@@ -57,7 +57,7 @@ export default function Header(): React.ReactElement {
               <Tab label="Main" disabled />
               <Tab label="Quests" value="/" />
               <Tab label="Launch Pad" disabled />
-              <Tab label="About" value="/about" />
+              <Tab label="About" disabled />
             </StyledTabs>
             <Stack
               direction="row"

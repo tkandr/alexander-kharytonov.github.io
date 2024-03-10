@@ -2,7 +2,7 @@
 
 import { LinearProgress } from "@mui/material";
 
-export default function HomePageLoading() {
+export default function RootPageLoading() {
   return (
     <LinearProgress
       variant="query"

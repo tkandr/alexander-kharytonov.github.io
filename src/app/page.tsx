@@ -5,7 +5,7 @@ import CompleteQuestsPaper from "app/components/complete-quests-paper";
 import DailyPaper from "app/components/daily-paper";
 import ProgressPaper from "app/components/progress-paper";
 
-export default function HomePage() {
+export default function RootPage() {
   return (
     <>
       <Box component="section" sx={{ backgroundColor: "section.main" }}>

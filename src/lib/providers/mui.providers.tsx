@@ -71,15 +71,13 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
         fontSize: "1.325rem",
       },
     },
-    shape: {
-      borderRadius: 40,
-    },
     components: {
       MuiButton: {
         styleOverrides: {
           root: () => ({
             textTransform: "none",
             boxShadow: "none",
+            borderRadius: 40,
 
             "&:hover": {
               boxShadow: "none",

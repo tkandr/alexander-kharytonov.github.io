@@ -6,19 +6,6 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import { StarPoint as StarPointIcon } from "lib/icons";
 
-const IMAGES = {
-  box: {
-    src: "/images/box.png",
-    width: 48,
-    height: 50,
-  },
-  partners: {
-    src: "/images/partners.png",
-    width: 60,
-    height: 50,
-  },
-};
-
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
   display: "flex",

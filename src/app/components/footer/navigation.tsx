@@ -6,23 +6,31 @@ const PERSONA_NAVIGATION = [
   {
     title: "LaunchJoy",
     children: [
-      { title: "Blog", href: "/" },
-      { title: "Press & media kit", href: "/" },
-      { title: "CoinMarketCap", href: "/" },
+      { title: "Blog", href: "https://blog.launchjoy.com", target: "_blank" },
+      {
+        title: "Press & media kit",
+        href: "https://www.bitget.com/calendar/event/coinmarketcap-partnership-chromia",
+        target: "_blank",
+      },
+      {
+        title: "CoinMarketCap",
+        href: "https://www.bitget.com/calendar/event/coinmarketcap-partnership-chromia",
+        target: "_blank",
+      },
     ],
   },
   {
     title: "Technology",
     children: [
-      { title: "Chromia", href: "https://chromia.com/", target: "_blank" },
+      { title: "Chromia", href: "http://chromia.com", target: "_blank" },
       {
         title: "Stake CHR",
-        href: "https://www.stakingrewards.com/asset/chromia",
+        href: "https://staking.chromia.com",
         target: "_blank",
       },
       {
         title: "ChromaWay",
-        href: "https://chromaway.com/",
+        href: "https://chromaway.com",
         target: "_blank",
       },
     ],
@@ -30,9 +38,21 @@ const PERSONA_NAVIGATION = [
   {
     title: "Games",
     children: [
-      { title: "Mines of Dalarnia", href: "/" },
-      { title: "Chain of Alliance", href: "/" },
-      { title: "My Neighbor Alice", href: "/" },
+      {
+        title: "Mines of Dalarnia",
+        href: "https://www.minesofdalarnia.com",
+        target: "_blank",
+      },
+      {
+        title: "Chain of Alliance",
+        href: "https://chainofalliance.com",
+        target: "_blank",
+      },
+      {
+        title: "My Neighbor Alice",
+        href: "https://www.myneighboralice.com",
+        target: "_blank",
+      },
     ],
   },
 ];

@@ -1,5 +1,3 @@
-"use client";
-
 import { IconButton } from "@mui/material";
 import {
   Brightness7 as Brightness7Icon,
