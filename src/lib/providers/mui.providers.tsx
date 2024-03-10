@@ -87,6 +87,17 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
           }),
         },
       },
+      MuiFab: {
+        styleOverrides: {
+          root: () => ({
+            boxShadow: "none",
+
+            "&:hover": {
+              boxShadow: "none",
+            },
+          }),
+        },
+      },
     },
   };
 }

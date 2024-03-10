@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import CompleteQuestsPaper from "app/components/complete-quests-paper";
 import DailyPaper from "app/components/daily-paper";
 import ProgressPaper from "app/components/progress-paper";
@@ -52,6 +52,7 @@ export default function HomePage() {
           </Grid>
         </Container>
       </Box>
+      <Divider />
       <Container sx={{ py: 2 }}>
         <Typography>Quests</Typography>
       </Container>
