@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Box, Button, Paper, Stack, Typography, styled } from "@mui/material";
 import { East as EastIcon } from "@mui/icons-material";
 import Tilt from "react-parallax-tilt";
+import { useThemeContext } from "lib/providers/mui.providers";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
@@ -23,6 +24,7 @@ export default function CompleteQuestsBox({
 }: {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }): React.ReactElement {
+  const { mode } = useThemeContext();
   return (
     <Tilt
       perspective={1500}
@@ -31,7 +33,7 @@ export default function CompleteQuestsBox({
       glareMaxOpacity={0.25}
       glareBorderRadius="12px"
       transitionSpeed={1500}
-      glareColor="lightblue"
+      glareColor={mode === "dark" ? "lightblue" : "#FFDE68"}
       glarePosition="all"
       scale={1.025}
     >

@@ -17,6 +17,7 @@ import {
   System as SystemIcon,
 } from "lib/icons";
 import Tilt from "react-parallax-tilt";
+import { useThemeContext } from "lib/providers/mui.providers";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.quest.main,
@@ -40,6 +41,7 @@ export default function Quest({
   stagesCount: number;
   title: string;
 }): React.ReactElement {
+  const { mode } = useThemeContext();
   return (
     <Box
       sx={{
@@ -58,7 +60,7 @@ export default function Quest({
         glareMaxOpacity={0.25}
         glareBorderRadius="12px"
         transitionSpeed={1500}
-        glareColor="lightblue"
+        glareColor={mode === "dark" ? "lightblue" : "#FFDE68"}
         glarePosition="all"
         scale={1.025}
       >

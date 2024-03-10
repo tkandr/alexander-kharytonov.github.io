@@ -4,6 +4,7 @@ import { Divider, Paper, Stack, Typography, styled } from "@mui/material";
 import { StarPoint as StarPointIcon } from "lib/icons";
 import BorderLinearProgress from "app/components/styled/border-linear-progress";
 import Tilt from "react-parallax-tilt";
+import { useThemeContext } from "lib/providers/mui.providers";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
@@ -32,6 +33,8 @@ export default function ProgressPaper({
   points: number;
   totalPoints: number;
 }): React.ReactElement {
+  const { mode } = useThemeContext();
+
   return (
     <Tilt
       perspective={1500}
@@ -40,7 +43,7 @@ export default function ProgressPaper({
       glareMaxOpacity={0.25}
       glareBorderRadius="12px"
       transitionSpeed={1500}
-      glareColor="lightblue"
+      glareColor={mode === "dark" ? "lightblue" : "#FFDE68"}
       glarePosition="all"
       scale={1.025}
     >

@@ -2,6 +2,7 @@ import _ from "lodash";
 import Image from "next/image";
 import { Box, Button, Paper, Stack, Typography, styled } from "@mui/material";
 import Tilt from "react-parallax-tilt";
+import { useThemeContext } from "lib/providers/mui.providers";
 
 const IMAGES = {
   box: {
@@ -42,6 +43,8 @@ export default function DailyPaper({
   image?: "box" | "partners";
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }): React.ReactElement {
+  const { mode } = useThemeContext();
+
   return (
     <Tilt
       perspective={1500}
@@ -50,7 +53,7 @@ export default function DailyPaper({
       glareMaxOpacity={0.15}
       glareBorderRadius="12px"
       transitionSpeed={1500}
-      glareColor="lightblue"
+      glareColor={mode === "dark" ? "lightblue" : "#FFDE68"}
       glarePosition="all"
       scale={1.025}
     >
