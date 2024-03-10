@@ -25,6 +25,7 @@ export default function RootPage() {
                   >
                     <Grid item xs={12} sm={6} display="flex">
                       <DailyPaper
+                        animationDelay={0.2}
                         title="Daily"
                         subTitle="Level up to unlock exclusive quests."
                         image="partners"
@@ -33,6 +34,7 @@ export default function RootPage() {
                     </Grid>
                     <Grid item xs={12} sm={6} display="flex">
                       <DailyPaper
+                        animationDelay={0.4}
                         title="Joy Streak"
                         subTitle="Level up to unlock exclusive quests."
                         image="box"
@@ -43,6 +45,7 @@ export default function RootPage() {
                 </Grid>
                 <Grid item xs={12}>
                   <ProgressPaper
+                    animationDelay={0.6}
                     userName="alexander.kharytonov"
                     points={755}
                     totalPoints={1531}
