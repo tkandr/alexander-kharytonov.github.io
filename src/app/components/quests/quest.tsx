@@ -61,7 +61,7 @@ export default function Quest({
       }}
       viewport={{
         once: true,
-        amount: 0.2,
+        amount: 0.1,
       }}
       whileInView="onscreen"
       sx={{
