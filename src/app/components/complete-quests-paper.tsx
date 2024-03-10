@@ -2,6 +2,7 @@ import _ from "lodash";
 import Image from "next/image";
 import { Box, Button, Paper, Stack, Typography, styled } from "@mui/material";
 import { East as EastIcon } from "@mui/icons-material";
+import Tilt from "react-parallax-tilt";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
@@ -23,54 +24,66 @@ export default function CompleteQuestsBox({
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }): React.ReactElement {
   return (
-    <StyledPaper
-      elevation={0}
-      sx={{
-        display: "flex",
-        alignItems: "stretch",
-        justifyContent: "stretch",
-        flexDirection: "column",
-        padding: { xs: 2, md: 4 },
-      }}
+    <Tilt
+      perspective={1500}
+      tiltEnable={false}
+      glareEnable={true}
+      glareMaxOpacity={0.25}
+      glareBorderRadius="12px"
+      transitionSpeed={1500}
+      glareColor="lightblue"
+      glarePosition="all"
+      scale={1.025}
     >
-      <Box
-        display="flex"
-        alignItems="center"
+      <StyledPaper
+        elevation={0}
         sx={{
-          marginTop: { xs: -3, md: -9 },
-          marginLeft: "auto",
-          marginRight: "auto",
+          display: "flex",
+          alignItems: "stretch",
+          justifyContent: "stretch",
+          flexDirection: "column",
+          padding: { xs: 2, md: 4 },
         }}
       >
-        <Image
-          src="/images/joystick.png"
-          width={436}
-          height={202}
-          alt="Complete quests to earn XP and compete!"
-          priority={true}
-          className="preview"
-        />
-      </Box>
-      <Stack
-        direction="column"
-        spacing={2}
-        sx={{ marginTop: "auto", position: "relative" }}
-      >
-        <Typography variant="h6" sx={{ fontSize: "1.15rem" }}>
-          Complete quests to earn XP and compete!
-        </Typography>
-        <div>
-          <Button
-            onClick={(event) => onClick(event)}
-            variant="contained"
-            color="secondary"
-            sx={{ minWidth: "50%", width: { xs: "100%", md: "auto" } }}
-            endIcon={<EastIcon />}
-          >
-            View leaderboard
-          </Button>
-        </div>
-      </Stack>
-    </StyledPaper>
+        <Box
+          display="flex"
+          alignItems="center"
+          sx={{
+            marginTop: { xs: -3, md: -9 },
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <Image
+            src="/images/joystick.png"
+            width={436}
+            height={202}
+            alt="Complete quests to earn XP and compete!"
+            priority={true}
+            className="preview"
+          />
+        </Box>
+        <Stack
+          direction="column"
+          spacing={2}
+          sx={{ marginTop: "auto", position: "relative" }}
+        >
+          <Typography variant="h6" sx={{ fontSize: "1.15rem" }}>
+            Complete quests to earn XP and compete!
+          </Typography>
+          <div>
+            <Button
+              onClick={(event) => onClick(event)}
+              variant="contained"
+              color="secondary"
+              sx={{ minWidth: "50%", width: { xs: "100%", md: "auto" } }}
+              endIcon={<EastIcon />}
+            >
+              View leaderboard
+            </Button>
+          </div>
+        </Stack>
+      </StyledPaper>
+    </Tilt>
   );
 }

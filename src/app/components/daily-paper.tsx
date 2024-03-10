@@ -1,6 +1,7 @@
 import _ from "lodash";
 import Image from "next/image";
 import { Box, Button, Paper, Stack, Typography, styled } from "@mui/material";
+import Tilt from "react-parallax-tilt";
 
 const IMAGES = {
   box: {
@@ -42,35 +43,48 @@ export default function DailyPaper({
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }): React.ReactElement {
   return (
-    <StyledPaper elevation={0}>
-      {image && !_.isEmpty(IMAGES[image]) && (
-        <Image
-          alt={title}
-          priority={true}
-          className="preview"
-          {...IMAGES[image]}
-        />
-      )}
-      <Stack
-        direction="column"
-        justifyContent="space-between"
-        alignItems="flex-start"
-        spacing={1}
-        sx={{ flex: 1, position: "relative" }}
-      >
-        <Box>
-          <Typography variant="h6">{title}</Typography>
-          {subTitle && <Typography variant="caption">{subTitle}</Typography>}
-        </Box>
-        <Button
-          onClick={(event) => onClick(event)}
-          variant="contained"
-          size="large"
-          fullWidth
+    <Tilt
+      perspective={1500}
+      tiltEnable={false}
+      glareEnable={true}
+      glareMaxOpacity={0.15}
+      glareBorderRadius="12px"
+      transitionSpeed={1500}
+      glareColor="lightblue"
+      glarePosition="all"
+      scale={1.025}
+    >
+      <StyledPaper elevation={0}>
+        {image && !_.isEmpty(IMAGES[image]) && (
+          <Image
+            alt={title}
+            priority={true}
+            className="preview"
+            {...IMAGES[image]}
+          />
+        )}
+        <Stack
+          direction="column"
+          justifyContent="space-between"
+          alignItems="flex-start"
+          spacing={1}
+          sx={{ flex: 1, position: "relative" }}
         >
-          GM
-        </Button>
-      </Stack>
-    </StyledPaper>
+          <Box>
+            <Typography variant="h6">{title}</Typography>
+            {subTitle && <Typography variant="caption">{subTitle}</Typography>}
+          </Box>
+          <Button
+            sx={{ position: "relative", zIndex: 1 }}
+            onClick={(event) => onClick(event)}
+            variant="contained"
+            size="large"
+            fullWidth
+          >
+            GM
+          </Button>
+        </Stack>
+      </StyledPaper>
+    </Tilt>
   );
 }
