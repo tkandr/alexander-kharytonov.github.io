@@ -34,7 +34,7 @@ export default function CompleteQuestsBox({
         offscreen: {
           opacity: 0,
           scale: 0,
-          x: 500,
+          x: 100,
         },
         onscreen: {
           opacity: 1,
