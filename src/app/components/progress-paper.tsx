@@ -1,14 +1,6 @@
 import _ from "lodash";
 import Image from "next/image";
-import {
-  Box,
-  Divider,
-  Paper,
-  Stack,
-  SvgIcon,
-  Typography,
-  styled,
-} from "@mui/material";
+import { Divider, Paper, Stack, Typography, styled } from "@mui/material";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";

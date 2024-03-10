@@ -1,6 +1,6 @@
 import _ from "lodash";
 import Link from "next/link";
-import { Grid, Link as MUILink, Stack, Typography } from "@mui/material";
+import { Link as MUILink, Stack, Typography } from "@mui/material";
 
 const PERSONA_NAVIGATION = [
   {

@@ -30,14 +30,16 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   },
 }));
 
-export default function DailyBox({
+export default function DailyPaper({
   subTitle,
   title,
   image,
+  onClick,
 }: {
   subTitle?: string;
   title: string;
   image?: "box" | "partners";
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }): React.ReactElement {
   return (
     <StyledPaper elevation={0}>
@@ -54,13 +56,17 @@ export default function DailyBox({
         justifyContent="space-between"
         alignItems="flex-start"
         spacing={1}
-        sx={{ flex: 1 }}
+        sx={{ flex: 1, position: "relative" }}
       >
-        <Box sx={{ position: "relative" }}>
+        <Box>
           <Typography variant="h6">{title}</Typography>
           {subTitle && <Typography variant="caption">{subTitle}</Typography>}
         </Box>
-        <Button variant="contained" fullWidth>
+        <Button
+          onClick={(event) => onClick(event)}
+          variant="contained"
+          fullWidth
+        >
           GM
         </Button>
       </Stack>

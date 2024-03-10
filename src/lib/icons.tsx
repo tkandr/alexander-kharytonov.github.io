@@ -64,13 +64,13 @@ export const Instagram = (props: CustomIcon) => (
     <g clipPath="url(#clip0_618_767)">
       <path
         d="M17 3H7C4.79086 3 3 4.79086 3 7V17C3 19.2092 4.79086 21 7 21H17C19.2092 21 21 19.2092 21 17V7C21 4.79086 19.2092 3 17 3Z"
-        stroke-width="2"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinejoin="round"
       />
       <path
         d="M12 16C14.2092 16 16 14.2092 16 12C16 9.79085 14.2092 8 12 8C9.79085 8 8 9.79085 8 12C8 14.2092 9.79085 16 12 16Z"
-        stroke-width="2"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinejoin="round"
       />
       <path d="M17.5 7.5C18.0523 7.5 18.5 7.0523 18.5 6.5C18.5 5.9477 18.0523 5.5 17.5 5.5C16.9477 5.5 16.5 5.9477 16.5 6.5C16.5 7.0523 16.9477 7.5 17.5 7.5Z" />
     </g>
@@ -91,7 +91,7 @@ export const StarPoint = (props: CustomIcon) => (
     <path
       d="M1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11Z"
       stroke="#FFA15E"
-      stroke-width="1.25"
+      strokeWidth="1.25"
     />
     <g filter="url(#filter0_d_569_17714)">
       <path
@@ -107,9 +107,9 @@ export const StarPoint = (props: CustomIcon) => (
         width="15"
         height="15"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
