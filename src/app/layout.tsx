@@ -19,11 +19,11 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProviders>
-            <Stack direction="column" sx={{ minHeight: "100vh" }}>
-              <Header />
-              {children}
-              <Footer />
-            </Stack>
+            {/* <Stack direction="column" sx={{ minHeight: "100vh" }}> */}
+            <Header />
+            {children}
+            <Footer />
+            {/* </Stack> */}
           </ThemeProviders>
         </AppRouterCacheProvider>
       </body>
