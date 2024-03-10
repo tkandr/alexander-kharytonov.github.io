@@ -4,6 +4,7 @@ import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import CompleteQuestsPaper from "app/components/complete-quests-paper";
 import DailyPaper from "app/components/daily-paper";
 import ProgressPaper from "app/components/progress-paper";
+import Quests from "app/components/quests";
 
 export default function RootPage() {
   return (
@@ -53,9 +54,7 @@ export default function RootPage() {
         </Container>
       </Box>
       <Divider />
-      <Container sx={{ py: 2 }}>
-        <Typography>Quests</Typography>
-      </Container>
+      <Quests title="Latest quests" />
     </>
   );
 }

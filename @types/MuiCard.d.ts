@@ -1,7 +1,7 @@
-import { ButtonPropsColorOverrides } from "@mui/material";
+import { CardPropsColorOverrides } from "@mui/material";
 
 declare module "@mui/material/Button" {
-  interface ButtonPropsColorOverrides {
+  interface CardPropsColorOverrides {
     section: true;
     footer: true;
     quest: true;

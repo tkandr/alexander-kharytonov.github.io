@@ -48,6 +48,7 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
             secondary: { main: "#5EC07F" },
             section: { main: "#1A1C21" },
             footer: { main: "#2D333F" },
+            quest: { main: "#292F3A" },
             background: { paper: "#21262F", default: "#21262F" },
             text: { primary: "#FFFCF5" },
           }
@@ -57,6 +58,7 @@ function getDesignTokens(mode: PaletteMode): ThemeOptions {
             secondary: { main: "#5EC07F" },
             section: { main: "#EBE6D7" },
             footer: { main: "#EBE6D7" },
+            quest: { main: "#F7F3E9" },
             background: { paper: "#FFFCF5", default: "#FFFCF5" },
             text: { primary: "#21262F" },
           },

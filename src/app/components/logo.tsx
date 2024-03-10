@@ -17,7 +17,7 @@ export default function Logo(): React.ReactElement {
       sx={{ my: 2, textDecoration: "none", display: "inline-flex" }}
     >
       <Image
-        src={`/logo/logo.${mode}.svg`}
+        src={`/images/logo/logo.${mode}.svg`}
         width={42}
         height={56}
         alt="LaunchJoy"

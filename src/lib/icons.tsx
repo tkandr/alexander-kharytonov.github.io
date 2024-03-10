@@ -82,6 +82,15 @@ export const Instagram = (props: CustomIcon) => (
   </SvgIcon>
 );
 
+export const Star = (props: CustomIcon) => (
+  <SvgIcon {...props}>
+    <path
+      d="M19.3996 9.39804C14.5466 9.39804 10.6004 5.45186 10.6004 0.600404C10.6004 0.267537 10.3329 1.06286e-06 10 1.03378e-06C9.66714 1.0047e-06 9.3996 0.267537 9.3996 0.600404C9.3996 5.45186 5.45186 9.39804 0.600409 9.39804C0.267543 9.39804 2.81149e-06 9.66558 2.78237e-06 9.99844C2.75325e-06 10.3313 0.267543 10.5988 0.600409 10.5988C5.45342 10.5988 9.3996 14.1982 9.3996 19.3996C9.3996 19.7325 9.66713 20 10 20C10.3329 20 10.6004 19.7325 10.6004 19.3996C10.6004 14.0691 14.5481 10.5988 19.3996 10.5988C19.7325 10.5988 20 10.3313 20 9.99844C20 9.66558 19.7325 9.39804 19.3996 9.39804Z"
+      fill="#FFA15E"
+    />
+  </SvgIcon>
+);
+
 export const StarPoint = (props: CustomIcon) => (
   <SvgIcon {...props}>
     <path
@@ -160,6 +169,271 @@ export const Application = (props: CustomIcon) => (
       d="M6.75 20.5C8.54493 20.5 10 19.0449 10 17.25C10 15.4551 8.54493 14 6.75 14C4.95507 14 3.5 15.4551 3.5 17.25C3.5 19.0449 4.95507 20.5 6.75 20.5Z"
       stroke="#21262F"
       strokeWidth="2"
+    />
+  </SvgIcon>
+);
+
+export const System = (props: CustomIcon) => (
+  <SvgIcon {...props}>
+    <g clipPath="url(#clip0_656_106)">
+      <path
+        d="M7.5 2.5H3.33333C2.8731 2.5 2.5 2.8731 2.5 3.33333V7.5C2.5 7.96024 2.8731 8.33333 3.33333 8.33333H7.5C7.96024 8.33333 8.33333 7.96024 8.33333 7.5V3.33333C8.33333 2.8731 7.96024 2.5 7.5 2.5Z"
+        stroke="#21262F"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.5 11.6667H3.33333C2.8731 11.6667 2.5 12.0398 2.5 12.5V16.6667C2.5 17.1269 2.8731 17.5 3.33333 17.5H7.5C7.96024 17.5 8.33333 17.1269 8.33333 16.6667V12.5C8.33333 12.0398 7.96024 11.6667 7.5 11.6667Z"
+        stroke="#21262F"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.5834 8.33333C16.1942 8.33333 17.5 7.0275 17.5 5.41667C17.5 3.80584 16.1942 2.5 14.5834 2.5C12.9725 2.5 11.6667 3.80584 11.6667 5.41667C11.6667 7.0275 12.9725 8.33333 14.5834 8.33333Z"
+        stroke="#21262F"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.6667 11.6667H12.5C12.0398 11.6667 11.6667 12.0398 11.6667 12.5V16.6667C11.6667 17.1269 12.0398 17.5 12.5 17.5H16.6667C17.1269 17.5 17.5 17.1269 17.5 16.6667V12.5C17.5 12.0398 17.1269 11.6667 16.6667 11.6667Z"
+        stroke="#21262F"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_656_106">
+        <rect width="20" height="20" fill="white" />
+      </clipPath>
+    </defs>
+  </SvgIcon>
+);
+
+export const MetaMask = (props: CustomIcon) => (
+  <SvgIcon {...props}>
+    <path
+      d="M17.1598 1L10.5169 6.00133L11.7506 3.05067L17.1598 1Z"
+      fill="#E17726"
+      stroke="#E17726"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M1.84021 1L8.42263 6.04867L7.24936 3.05067L1.84021 1Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14.7719 12.594L13.0047 15.342L16.786 16.3973L17.8667 12.6547L14.7719 12.594Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M1.13992 12.6547L2.214 16.3973L5.99528 15.342L4.23471 12.594L1.13992 12.6547Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.78836 7.95064L4.73465 9.56864L8.48308 9.73797L8.35629 5.64264L5.78836 7.95064Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M13.2117 7.95067L10.6037 5.59534L10.5169 9.738L14.2654 9.56867L13.2117 7.95067Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.9953 15.342L8.25645 14.2247L6.30866 12.682L5.9953 15.342Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.7436 14.2247L13.0047 15.342L12.6914 12.682L10.7436 14.2247Z"
+      fill="#E27625"
+      stroke="#E27625"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M13.0047 15.342L10.7436 14.2247L10.9236 15.7207L10.9039 16.35L13.0047 15.342Z"
+      fill="#D5BFB2"
+      stroke="#D5BFB2"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.9953 15.342L8.09616 16.35L8.08302 15.7207L8.25645 14.2247L5.9953 15.342Z"
+      fill="#D5BFB2"
+      stroke="#D5BFB2"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8.3446 11.6933L6.04694 11.0075L7.66806 10.255L8.3446 11.6933Z"
+      fill="#233447"
+      stroke="#233447"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.2782 12L11.1585 10L13.2782 11.0464L10.2782 12Z"
+      fill="#233447"
+      stroke="#233447"
+      strokeWidth="0.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.99528 15.342L6.32177 12.594L4.23471 12.6547L5.99528 15.342Z"
+      fill="#CC6228"
+      stroke="#CC6228"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12.6782 12.594L13.0047 15.342L14.7719 12.6547L12.6782 12.594Z"
+      fill="#CC6228"
+      stroke="#CC6228"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14.2654 9.56866L10.5169 9.738L10.8638 11.6933L11.2782 10L13.2782 11L14.2654 9.56866Z"
+      fill="#CC6228"
+    />
+    <path
+      d="M4.73463 9.62146L8.48306 9.79079L8.1362 11.7461L7.72183 10.0528L5.72183 11.0528L4.73463 9.62146Z"
+      fill="#CC6228"
+    />
+    <path
+      d="M4.73465 9.56866L6.30865 12.682L6.25544 11.132L4.73465 9.56866Z"
+      fill="#E27525"
+      stroke="#E27525"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12.7511 11.132L12.6913 12.682L14.2653 9.56866L12.7511 11.132Z"
+      fill="#E27525"
+      stroke="#E27525"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8.48309 9.73798L8.13623 11.6933L8.57637 14.0013L8.66966 10.9626L8.48309 9.73798Z"
+      fill="#E27525"
+      stroke="#E27525"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.5169 9.73798L10.3369 10.956L10.4236 14.0013L10.8638 11.6933L10.5169 9.73798Z"
+      fill="#E27525"
+      stroke="#E27525"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.8638 11.6934L10.4236 14.0014L10.7436 14.2247L12.6914 12.682L12.7511 11.132L10.8638 11.6934Z"
+      fill="#F5841F"
+      stroke="#F5841F"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M6.25543 11.132L6.30864 12.682L8.25643 14.2247L8.57636 14.0014L8.13622 11.6934L6.25543 11.132Z"
+      fill="#F5841F"
+      stroke="#F5841F"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.9039 16.35L10.9236 15.7206L10.7574 15.572H8.24265L8.08302 15.7206L8.09616 16.35L5.9953 15.342L6.72909 15.9506L8.22294 17H10.7771L12.2709 15.9506L13.0047 15.342L10.9039 16.35Z"
+      fill="#C0AC9D"
+      stroke="#C0AC9D"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.7436 14.2247L10.4236 14.0013H8.57636L8.25644 14.2247L8.08301 15.7207L8.24264 15.572H10.7574L10.9236 15.7207L10.7436 14.2247Z"
+      fill="#161616"
+      stroke="#161616"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M17.4396 6.32667L18 3.56533L17.1598 1L10.7436 5.83267L13.2116 7.95067L16.6993 8.98667L17.4666 8.07267L17.1328 7.82933L17.6663 7.33467L17.2596 7.01L17.7931 6.59733L17.4396 6.32667Z"
+      fill="#763E1A"
+      stroke="#763E1A"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M1 3.56533L1.56693 6.32667L1.20693 6.59733L1.74036 7.01L1.33372 7.33467L1.86715 7.82933L1.53343 8.07267L2.30072 8.98667L5.78835 7.95067L8.25643 5.83267L1.84021 1L1 3.56533Z"
+      fill="#763E1A"
+      stroke="#763E1A"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M16.6993 8.98668L13.2116 7.95068L14.2653 9.56868L12.6913 12.682L14.7718 12.6547H17.8666L16.6993 8.98668Z"
+      fill="#F5841F"
+      stroke="#F5841F"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5.78835 7.95068L2.30072 8.98668L1.13992 12.6547H4.23471L6.30863 12.682L4.73463 9.56868L5.78835 7.95068Z"
+      fill="#F5841F"
+      stroke="#F5841F"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10.5169 9.73799L10.7436 5.83266L11.7506 3.05066H7.24936L8.25643 5.83266L8.48307 9.73799L8.56978 10.9693L8.57635 14.0013H10.4236L10.4302 10.9693L10.5169 9.73799Z"
+      fill="#F5841F"
+      stroke="#F5841F"
+      strokeWidth="0.712817"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </SvgIcon>
 );

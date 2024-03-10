@@ -1,10 +1,8 @@
 import _ from "lodash";
 import Image from "next/image";
 import { Divider, Paper, Stack, Typography, styled } from "@mui/material";
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
 import { StarPoint as StarPointIcon } from "lib/icons";
+import BorderLinearProgress from "app/components/styled/border-linear-progress";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: "relative",
@@ -21,20 +19,6 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     height: "auto",
     right: 0,
     transform: "translateY(-50%)",
-  },
-}));
-
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 5,
-  borderRadius: 5,
-
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.palette.mode === "light" ? "#BCBBB7" : "#64676B",
-  },
-
-  [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 5,
-    backgroundColor: theme.palette.secondary.main,
   },
 }));
 
@@ -85,7 +69,7 @@ export default function ProgressPaper({
           </Stack>
           <BorderLinearProgress
             variant="determinate"
-            value={(points / totalPoints) * 100}
+            value={Math.round((points / totalPoints) * 100)}
           />
         </Stack>
       </Stack>
