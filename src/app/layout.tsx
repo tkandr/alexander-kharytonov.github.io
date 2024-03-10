@@ -8,6 +8,7 @@ import Demo from "app/components/demo";
 
 export const metadata: Metadata = {
   title: "LaunchJoy Quests",
+  viewport: "initial-scale=1, viewport-fit=cover",
 };
 
 export default function RootLayout({
