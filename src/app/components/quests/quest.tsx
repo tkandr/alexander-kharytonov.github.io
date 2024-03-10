@@ -7,6 +7,8 @@ import {
   Divider,
   Stack,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
@@ -36,7 +38,28 @@ export default function Quest({
   title: string;
   index: number;
 }): React.ReactElement {
+  const theme = useTheme();
   const { mode } = useThemeContext();
+
+  const [sm, md, lg] = [
+    useMediaQuery(theme.breakpoints.up("sm"), { noSsr: true }),
+    useMediaQuery(theme.breakpoints.up("md"), { noSsr: true }),
+    useMediaQuery(theme.breakpoints.up("lg"), { noSsr: true }),
+  ];
+
+  function getDelay(): number {
+    switch (true) {
+      case lg:
+        return (index % 5) / 10;
+      case md:
+        return (index % 4) / 10;
+      case sm:
+        return (index % 2) / 10;
+      default:
+        return 0;
+    }
+  }
+
   return (
     <Box
       component={motion.div}
@@ -54,7 +77,7 @@ export default function Quest({
           transition: {
             bounce: 0.4,
             duration: 0.8,
-            delay: index / 10,
+            delay: getDelay(),
             type: "spring",
           },
         },

@@ -22,7 +22,12 @@ export default function QuestSkeleton(): React.ReactElement {
           <Skeleton variant="rounded" animation="wave" height={5} />
         </CardContent>
         <CardActions sx={{ pt: 0, pb: 2, px: 2 }}>
-          <Skeleton variant="rounded" width="100%" height={42} />
+          <Skeleton
+            variant="rounded"
+            width="100%"
+            height={42}
+            sx={{ mt: 0.9 }}
+          />
         </CardActions>
       </StyledQuestCard>
     </Box>
