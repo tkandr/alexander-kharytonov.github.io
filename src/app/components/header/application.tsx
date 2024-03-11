@@ -87,10 +87,10 @@ export default function Application(): React.ReactElement | null {
       </Fab>
       <Menu
         anchorEl={buttonRef}
-        anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
+        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         onClose={handleClose}
         open={open}
-        transformOrigin={{ horizontal: "center", vertical: "top" }}
+        transformOrigin={{ horizontal: "right", vertical: "top" }}
         sx={{ mt: 1.5 }}
       >
         <ListItem sx={{ whiteSpace: "nowrap" }}>
