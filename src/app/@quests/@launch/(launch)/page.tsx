@@ -81,7 +81,7 @@ async function getLaunchJoyQuests() {
   return data;
 }
 
-export default async function LaunchJoyQuestsPage() {
+export default async function LaunchJoyQuestsPage(): Promise<React.ReactElement> {
   return (
     <Quests
       title="LaunchJoy Quests"

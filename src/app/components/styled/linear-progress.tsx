@@ -3,7 +3,7 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+const StyledLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 5,
   borderRadius: 5,
 
@@ -17,4 +17,4 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-export default BorderLinearProgress;
+export default StyledLinearProgress;

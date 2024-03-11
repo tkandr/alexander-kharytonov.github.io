@@ -1,5 +1,5 @@
 import { Box, CardActions, CardContent, Skeleton } from "@mui/material";
-import StyledQuestCard from "app/components/styled/quest-card";
+import { StyledCard } from "app/components/styled";
 
 export default function QuestSkeleton(): React.ReactElement {
   return (
@@ -14,7 +14,7 @@ export default function QuestSkeleton(): React.ReactElement {
         },
       }}
     >
-      <StyledQuestCard>
+      <StyledCard>
         <Skeleton variant="rectangular" height={250} />
         <CardContent sx={{ py: 1.5 }}>
           <Skeleton variant="rounded" height={24} sx={{ mb: 1.25 }} />
@@ -29,7 +29,7 @@ export default function QuestSkeleton(): React.ReactElement {
             sx={{ mt: 0.9 }}
           />
         </CardActions>
-      </StyledQuestCard>
+      </StyledCard>
     </Box>
   );
 }

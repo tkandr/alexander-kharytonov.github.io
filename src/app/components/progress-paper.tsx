@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Box, Divider, Paper, Stack, Typography, styled } from "@mui/material";
 import { StarPoint as StarPointIcon } from "lib/icons";
-import BorderLinearProgress from "app/components/styled/border-linear-progress";
+import { StyledLinearProgress } from "app/components/styled";
 import Tilt from "react-parallax-tilt";
 import { useThemeContext } from "lib/providers/mui.providers";
 
@@ -143,7 +143,7 @@ export default function ProgressPaper({
                   >{`${points} / ${totalPoints} POINTs`}</Typography>
                 </Stack>
               </Stack>
-              <BorderLinearProgress
+              <StyledLinearProgress
                 variant="determinate"
                 value={Math.round((points / totalPoints) * 100)}
               />

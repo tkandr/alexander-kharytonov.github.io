@@ -1,34 +1,25 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import { useAccount } from "wagmi";
 import {
   AppBar,
   Box,
   Container,
   Divider,
-  Fab,
   Stack,
   Tab,
-  Tabs,
   Toolbar,
-  styled,
 } from "@mui/material";
 import Logo from "app/components/logo";
-import { Application as ApplicationIcon } from "lib/icons";
+import { StyledTabs } from "app/components/styled";
+import Application from "./application";
+import Connectors from "./connectors";
 import Wallet from "./wallet";
 import ModeSwitcher from "./mode-switcher";
 
-const StyledTabs = styled(Tabs)(({ theme }) => ({
-  "& .MuiTabs-flexContainer": {
-    height: "100%",
-  },
-
-  "& .MuiButtonBase-root": {
-    textTransform: "none",
-  },
-}));
-
 export default function Header(): React.ReactElement {
+  const { address, isConnected } = useAccount();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -66,12 +57,10 @@ export default function Header(): React.ReactElement {
               sx={{ ml: "auto" }}
             >
               <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-                <Wallet />
+                {address && <Wallet address={address} />}
               </Box>
               <ModeSwitcher />
-              <Fab size="medium" color="primary">
-                <ApplicationIcon sx={{ color: "transparent" }} />
-              </Fab>
+              {isConnected ? <Application /> : <Connectors />}
             </Stack>
           </Toolbar>
         </Container>

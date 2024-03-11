@@ -46,7 +46,7 @@ async function getLatestQuests() {
   return data;
 }
 
-export default async function LatestQuestsPage() {
+export default async function LatestQuestsPage(): Promise<React.ReactElement> {
   return (
     <Quests title="Latest Quests" quests={(await getLatestQuests()) as []} />
   );

@@ -1,39 +1,35 @@
-import { Badge, Box, Divider, Stack, Typography, styled } from "@mui/material";
+import _ from "lodash";
+import { Address, Chain, formatUnits } from "viem";
+import { useBalance, useBlockNumber, useChainId, useSwitchChain } from "wagmi";
+import { useQueryClient } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { Box, Divider, Skeleton, Stack, Typography } from "@mui/material";
+import { StyledBadge } from "app/components/styled";
+import { truncateAddress } from "lib/utils";
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
-  "& .MuiBadge-badge": {
-    top: "50%",
-    right: "100%",
-    backgroundColor: "#44b700",
-    color: "#44b700",
-    marginRight: 12,
+export default function Wallet({
+  address,
+}: {
+  address: Address;
+}): React.ReactElement {
+  const queryClient = useQueryClient();
+  const { data: blockNumber } = useBlockNumber({ watch: true });
+  const { chains } = useSwitchChain();
+  const chainId = useChainId();
+  const {
+    data: balance,
+    isPending: isBalancePending,
+    queryKey,
+  } = useBalance({
+    address,
+  });
 
-    "&::after": {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      borderRadius: "50%",
-      animation: "ripple 1.2s infinite ease-in-out",
-      border: "1px solid currentColor",
-      content: '""',
-    },
-  },
+  useEffect(() => {
+    queryClient.invalidateQueries({ queryKey });
+  }, [blockNumber, queryClient, queryKey]);
 
-  "@keyframes ripple": {
-    "0%": {
-      transform: "scale(.8)",
-      opacity: 1,
-    },
-    "100%": {
-      transform: "scale(2.4)",
-      opacity: 0,
-    },
-  },
-}));
+  const { name: currentNetwork } = _.find(chains, { id: chainId }) as Chain;
 
-export default function Wallet(): React.ReactElement {
   return (
     <Stack
       direction="row"
@@ -41,12 +37,22 @@ export default function Wallet(): React.ReactElement {
       spacing={2}
     >
       <Box display="flex" flexDirection="column" alignItems="flex-end">
-        <Typography variant="caption" align="right" sx={{ opacity: 0.38 }}>
-          Wallet ID
+        <Typography
+          variant="caption"
+          align="right"
+          title={`Current network: ${currentNetwork}`}
+          sx={{ opacity: 0.38 }}
+        >
+          {currentNetwork}
         </Typography>
         <StyledBadge overlap="circular" variant="dot">
-          <Typography variant="caption" align="right">
-            0xC4B..24dc4
+          <Typography
+            variant="caption"
+            align="right"
+            title={`Wallet ID: ${address}`}
+            sx={{ whiteSpace: "nowrap" }}
+          >
+            {truncateAddress(address)}
           </Typography>
         </StyledBadge>
       </Box>
@@ -54,8 +60,14 @@ export default function Wallet(): React.ReactElement {
         <Typography variant="caption" sx={{ opacity: 0.38 }}>
           Balance
         </Typography>
-        <Typography variant="caption" noWrap>
-          8 000.00 POINT
+        <Typography variant="caption" sx={{ whiteSpace: "nowrap" }}>
+          {isBalancePending ? (
+            <Skeleton animation="wave" height={20} width={36} />
+          ) : (
+            `${formatUnits(balance!.value, balance!.decimals)} ${
+              balance!.symbol
+            }`
+          )}
         </Typography>
       </Box>
     </Stack>

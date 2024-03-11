@@ -12,8 +12,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import BorderLinearProgress from "app/components/styled/border-linear-progress";
-import StyledQuestCard from "app/components/styled/quest-card";
+import { StyledLinearProgress, StyledCard } from "app/components/styled";
 import {
   Star as StarIcon,
   MetaMask as MetaMaskIcon,
@@ -107,7 +106,7 @@ export default function Quest({
         glarePosition="all"
         scale={1.025}
       >
-        <StyledQuestCard>
+        <StyledCard>
           <CardMedia sx={{ height: 250 }} image={image} title={title} />
           <CardContent sx={{ py: 1.5 }}>
             <Typography
@@ -132,7 +131,7 @@ export default function Quest({
             </Stack>
             <Box display="flex" alignItems="center" sx={{ mt: 0.5 }}>
               <Box sx={{ width: "100%", mr: 1 }}>
-                <BorderLinearProgress
+                <StyledLinearProgress
                   variant="determinate"
                   value={Math.round((currentState / stagesCount) * 100)}
                 />
@@ -156,7 +155,7 @@ export default function Quest({
               Start a task
             </Button>
           </CardActions>
-        </StyledQuestCard>
+        </StyledCard>
       </Tilt>
     </Box>
   );

@@ -5,10 +5,13 @@ import { createContext, useContext, useMemo } from "react";
 import {
   createTheme,
   CssBaseline,
+  IconButton,
   PaletteMode,
   ThemeOptions,
   ThemeProvider,
 } from "@mui/material";
+import { Delete as DeleteIcon } from "@mui/icons-material";
+import { SnackbarProvider, closeSnackbar } from "notistack";
 import useLocalStorage from "lib/hooks/useLocalStorage";
 
 const sora = Sora({
@@ -132,7 +135,20 @@ export function ThemeProviders({
     <ThemeContext.Provider value={value}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {children}
+        <SnackbarProvider
+          action={(snackbarId) => (
+            <IconButton
+              color="inherit"
+              onClick={() => closeSnackbar(snackbarId)}
+              size="small"
+              aria-label="Close snackbar"
+            >
+              <DeleteIcon fontSize="inherit" />
+            </IconButton>
+          )}
+        >
+          {children}
+        </SnackbarProvider>
       </ThemeProvider>
     </ThemeContext.Provider>
   );

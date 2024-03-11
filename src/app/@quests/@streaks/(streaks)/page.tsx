@@ -46,6 +46,6 @@ async function getStreaksQuests() {
   return data;
 }
 
-export default async function StreaksQuestsPage() {
+export default async function StreaksQuestsPage(): Promise<React.ReactElement> {
   return <Quests title="Streaks" quests={(await getStreaksQuests()) as []} />;
 }
