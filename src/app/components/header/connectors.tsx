@@ -1,7 +1,7 @@
 "use client";
 
 import _ from "lodash";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BaseError, useConnect } from "wagmi";
 import {
   Avatar,
@@ -16,6 +16,7 @@ import { Wallet as WalletIcon } from "@mui/icons-material";
 import { enqueueSnackbar } from "notistack";
 
 export default function Connectors(): React.ReactElement | null {
+  const [canIUseConnector, updateCanIUseConnector] = useState(false);
   const { connect, connectors, isPending } = useConnect({
     mutation: {
       onSuccess: () => {
@@ -42,9 +43,16 @@ export default function Connectors(): React.ReactElement | null {
     updateLoadingButtonRef(null);
   };
 
-  return Boolean(
-    typeof window === "undefined" || !_.get(window, "ethereum.isMetaMask")
-  ) ? (
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      typeof (window as any).ethereum !== "undefined"
+    ) {
+      updateCanIUseConnector(true);
+    }
+  }, []);
+
+  return canIUseConnector ? (
     <>
       <LoadingButton
         loading={isPending}
