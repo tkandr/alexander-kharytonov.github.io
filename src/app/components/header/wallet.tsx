@@ -26,7 +26,7 @@ export default function Wallet({
 
   useEffect(() => {
     queryClient.invalidateQueries({ queryKey });
-  }, [blockNumber, queryClient, queryKey]);
+  }, [blockNumber, queryClient, queryKey, chainId]);
 
   const { name: currentNetwork } = _.find(chains, { id: chainId }) as Chain;
 
